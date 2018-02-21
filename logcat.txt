@@ -1,0 +1,68 @@
+  LD      drivers/built-in.o
+  LINK    vmlinux
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+WARNING: modpost: Found 18 section mismatch(es).
+To see full details build your kernel with:
+'make CONFIG_DEBUG_SECTION_MISMATCH=y'
+  GEN     .version
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      init/version.o
+  LD      init/built-in.o
+arch/arm/mach-mt6582/built-in.o: In function `__freq_to_index':
+/home/anton/kernel/kernel_alps_3.10.72-master/arch/arm/mach-mt6582/mt_freqhopping.c:506: undefined reference to `xlog_printk'
+arch/arm/mach-mt6582/built-in.o: In function `mt_fh_hal_default_conf':
+/home/anton/kernel/kernel_alps_3.10.72-master/arch/arm/mach-mt6582/mt_freqhopping.c:170: undefined reference to `xlog_printk'
+arch/arm/mach-mt6582/built-in.o: In function `freqhopping_dvfs_proc_read':
+/home/anton/kernel/kernel_alps_3.10.72-master/arch/arm/mach-mt6582/mt_freqhopping.c:2027: undefined reference to `xlog_printk'
+arch/arm/mach-mt6582/built-in.o: In function `freqhopping_dumpregs_proc_read':
+/home/anton/kernel/kernel_alps_3.10.72-master/arch/arm/mach-mt6582/mt_freqhopping.c:2144: undefined reference to `xlog_printk'
+arch/arm/mach-mt6582/built-in.o: In function `freqhopping_dramc_proc_read':
+/home/anton/kernel/kernel_alps_3.10.72-master/arch/arm/mach-mt6582/mt_freqhopping.c:1945: undefined reference to `xlog_printk'
+arch/arm/mach-mt6582/built-in.o:/home/anton/kernel/kernel_alps_3.10.72-master/arch/arm/mach-mt6582/mt_freqhopping.c:238: more undefined references to `xlog_printk' follow
+kernel/built-in.o: In function `do_sys_settimeofday':
+/home/anton/kernel/kernel_alps_3.10.72-master/kernel/time.c:184: undefined reference to `notify_time_update'
+kernel/built-in.o: In function `do_settimeofday':
+/home/anton/kernel/kernel_alps_3.10.72-master/kernel/time/timekeeping.c:520: undefined reference to `notify_time_update'
+drivers/built-in.o: In function `aee_wdt_irq_info':
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/aee/common/wdt-handler.c:465: undefined reference to `aee_rr_rec_exp_type'
+drivers/built-in.o: In function `ipanic_alog_buffer':
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/aee/ipanic/ipanic_rom.c:192: undefined reference to `panic_dump_android_log'
+drivers/built-in.o: In function `ipanic_recursive_ke':
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/aee/ipanic/ipanic_rom.c:519: undefined reference to `aee_rr_rec_exp_type'
+drivers/built-in.o: In function `ipanic_die':
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/aee/ipanic/ipanic_rom.c:613: undefined reference to `aee_rr_rec_exp_type'
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/aee/ipanic/ipanic_rom.c:617: undefined reference to `aee_rr_curr_exp_type'
+drivers/built-in.o: In function `ipanic':
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/aee/ipanic/ipanic_rom.c:462: undefined reference to `aee_rr_rec_exp_type'
+drivers/built-in.o: In function `mrdump_mini_build_elf_misc':
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/aee/mrdump/mrdump_mini.c:498: undefined reference to `get_android_log_buffer'
+drivers/built-in.o: In function `init_mlock_cnt':
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/m4u/mt6582/m4u_kernel.c:121: undefined reference to `xlog_printk'
+drivers/built-in.o: In function `m4u_user_v2p':
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/m4u/mt6582/m4u_kernel.c:210: undefined reference to `xlog_printk'
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/m4u/mt6582/m4u_kernel.c:215: undefined reference to `xlog_printk'
+drivers/built-in.o: In function `__m4u_get_user_pages':
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/m4u/mt6582/m4u_kernel.c:288: undefined reference to `xlog_printk'
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/m4u/mt6582/m4u_kernel.c:374: undefined reference to `xlog_printk'
+drivers/built-in.o:/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/m4u/mt6582/m4u_kernel.c:367: more undefined references to `xlog_printk' follow
+drivers/built-in.o: In function `mt_battery_average_method_init':
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/power/mediatek/battery_common.c:2155: undefined reference to `batt_cust_data'
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/power/mediatek/battery_common.c:2155: undefined reference to `batt_cust_data'
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/power/mediatek/battery_common.c:2153: undefined reference to `batt_cust_data'
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/power/mediatek/battery_common.c:2153: undefined reference to `batt_cust_data'
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/power/mediatek/battery_common.c:2151: undefined reference to `batt_cust_data'
+drivers/built-in.o:/home/anton/kernel/kernel_alps_3.10.72-master/drivers/power/mediatek/battery_common.c:2151: more undefined references to `batt_cust_data' follow
+drivers/built-in.o: In function `emi_bwl_mod_init':
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/emi_bwl/mt6582/emi_bwl.c:627: undefined reference to `xlog_printk'
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/emi_bwl/mt6582/emi_bwl.c:633: undefined reference to `xlog_printk'
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/emi_bwl/mt6582/emi_bwl.c:638: undefined reference to `xlog_printk'
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/emi_bwl/mt6582/emi_bwl.c:644: undefined reference to `xlog_printk'
+/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/emi_bwl/mt6582/emi_bwl.c:649: undefined reference to `xlog_printk'
+drivers/built-in.o:/home/anton/kernel/kernel_alps_3.10.72-master/drivers/misc/mediatek/m4u/mt6582/m4u_priv.c:4677: more undefined references to `xlog_printk' follow
+/home/anton/kernel/kernel_alps_3.10.72-master/Makefile:784: ошибка выполнения рецепта для цели «vmlinux»
+make[1]: *** [vmlinux] Ошибка 1
+Makefile:130: ошибка выполнения рецепта для цели «sub-make»
+make: *** [sub-make] Ошибка 2
+
